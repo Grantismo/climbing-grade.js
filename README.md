@@ -14,7 +14,7 @@ Currently supported systems include: French, Australian, South African, UIAA, He
 ```javascript
     var ClimbingGrade = require("../ClimbingGrade");
     var grade = new ClimbingGrade("9a", "french");
-    french.format("yds"); // 5.14d
+    grade.format("yds"); // 5.14d
 ```
 
 ## Tests
