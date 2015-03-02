@@ -21,7 +21,7 @@ describe("ClimbingGrade", function() {
 
 
   if (!this.ClimbingGrade) {
-    var ClimbingGrade = require("../ClimbingGrade.js");
+    var ClimbingGrade = require("../ClimbingGrade");
   }
 
   it("can be instantiated", function() {
