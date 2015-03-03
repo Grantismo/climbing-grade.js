@@ -75,15 +75,15 @@ describe("ClimbingGrade", function() {
   });
 
   it("works with heuco", function() {
-    testSystem("uiaa");
+    testSystem("heuco");
   });
 
   it("works with font", function() {
-    testSystem("uiaa");
+    testSystem("font");
   });
 
   it("works with british", function() {
-    testSystem("uiaa");
+    testSystem("british");
   });
 
   it("works with yds", function() {

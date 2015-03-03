@@ -8,20 +8,61 @@ Currently supported systems include: French, Australian, South African, UIAA, He
 
 ## Installation
 
-  npm install climbing-grade
+With node:
+
+```bash
+npm install climbing-grade
+```
+
+For the browser:
+
+```bash
+bower install climbing-grade
+```
 
 ## Usage
 
+Format a given grade in other grading systems
+
 ```javascript
-    var ClimbingGrade = require("climbing-grade");
-    var grade = new ClimbingGrade("9a", "french");
-    grade.format("yds"); // 5.14d
+var ClimbingGrade = require('climbing-grade');
+var grade = new ClimbingGrade('9a', 'french');
+grade.format('australian'); // '35'
+grade.format('south_african'); // '37'
+grade.format('uiaa'); // 'XI+'
+grade.format('heuco'); // V12
+grade.format('font'); // '8A+'
+grade.format('british'); // 'E10 7c'
+grade.format('yds'); // '5.14d'
 ```
+
+Supports ranges 
+
+```javascript
+var heuco = new ClimbingGrade('vb', 'heuco');
+heuco.format('font'); // '1 to 3+'
+
+
+var french = new ClimbingGrade('6c', 'french');
+french.format('yds'); // '5.11a/5.11b'
+```
+
+# Systems
+
+* 'french'
+* 'australian'
+* 'south_african'
+* 'uiaa'
+* 'heuco'
+* 'font'
+* 'british'
+* 'yds'
+
 
 ## Tests
 
 ```bash
-  jasmine
+jasmine
 ```
 
 ## License
