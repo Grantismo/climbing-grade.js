@@ -34,7 +34,7 @@ or Minified
 Format a given grade in other grading systems
 
 
-# Node
+### Node
 
 ```javascript
 var ClimbingGrade = require('climbing-grade'); 
@@ -48,7 +48,7 @@ grade.format('british'); // 'E10 7c'
 grade.format('yds'); // '5.14d'
 ```
 
-# Browser
+### Browser
 
 ```html
 <script type="text/javascript">
@@ -68,7 +68,7 @@ var french = new ClimbingGrade('6c', 'french');
 french.format('yds'); // '5.11a/5.11b'
 ```
 
-# Systems
+### Systems
 
 * 'french'
 * 'australian'
