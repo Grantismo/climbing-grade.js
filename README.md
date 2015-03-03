@@ -8,11 +8,12 @@ Currently supported systems include: French, Australian, South African, UIAA, He
 
 ## Installation
 
+  npm install climbing-grade
 
 ## Usage
 
 ```javascript
-    var ClimbingGrade = require("ClimbingGrade");
+    var ClimbingGrade = require("climbing-grade");
     var grade = new ClimbingGrade("9a", "french");
     grade.format("yds"); // 5.14d
 ```

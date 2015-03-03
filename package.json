@@ -1,0 +1,30 @@
+{
+  "name": "climbing-grade",
+  "version": "1.0.0",
+  "devDependencies" : {
+    "jasmine": "*"
+  },
+  "description": "converts climbing grades between different systems",
+  "main": "ClimbingGrade.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Grantismo/ClimbingGrade.js.git"
+  },
+  "keywords": [
+    "rock",
+    "climbing",
+    "grades",
+    "yds",
+    "heuco",
+    "font"
+  ],
+  "author": "Grant Warman <grant.warman@gmail.com> (https://github.com/Grantismo)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Grantismo/ClimbingGrade.js/issues"
+  },
+  "homepage": "https://github.com/Grantismo/ClimbingGrade.js"
+}
