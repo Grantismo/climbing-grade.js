@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Climbinggrade.js by Grantismo</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Climbinggrade.js</h1>
+        <p>A simple javascript library for conversion of climbing grades</p>
+
+        <p class="view"><a href="https://github.com/Grantismo/ClimbingGrade.js">View the Project on GitHub <small>Grantismo/ClimbingGrade.js</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/Grantismo/ClimbingGrade.js/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/Grantismo/ClimbingGrade.js/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/Grantismo/ClimbingGrade.js">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="climbinggradejs" class="anchor" href="#climbinggradejs" aria-hidden="true"><span class="octicon octicon-link"></span></a>ClimbingGrade.js</h1>
+
+<blockquote>
+<p>ClimbingGrade.js converts climbing grades between different systems.</p>
+</blockquote>
+
+<p>Currently supported systems include: French, Australian, South African, UIAA, Heuco, Font, British, YDS</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>With node:</p>
+
+<div class="highlight highlight-bash"><pre>npm install climbing-grade</pre></div>
+
+<p>For the browser:</p>
+
+<div class="highlight highlight-bash"><pre>bower install climbing-grade</pre></div>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>bower_components/climbing-grade/ClimbingGrade.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+
+<p>or Minified</p>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>bower_components/climbing-grade/ClimbingGrade.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Format a given grade in other grading systems</p>
+
+<h3>
+<a id="node" class="anchor" href="#node" aria-hidden="true"><span class="octicon octicon-link"></span></a>Node</h3>
+
+<div class="highlight highlight-javascript"><pre><span class="pl-s">var</span> ClimbingGrade <span class="pl-k">=</span> <span class="pl-s3">require</span>(<span class="pl-s1"><span class="pl-pds">'</span>climbing-grade<span class="pl-pds">'</span></span>); 
+<span class="pl-s">var</span> grade <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">ClimbingGrade</span>(<span class="pl-s1"><span class="pl-pds">'</span>9a<span class="pl-pds">'</span></span>, <span class="pl-s1"><span class="pl-pds">'</span>french<span class="pl-pds">'</span></span>);
+grade.format(<span class="pl-s1"><span class="pl-pds">'</span>australian<span class="pl-pds">'</span></span>); <span class="pl-c">// '35'</span>
+grade.format(<span class="pl-s1"><span class="pl-pds">'</span>south_african<span class="pl-pds">'</span></span>); <span class="pl-c">// '37'</span>
+grade.format(<span class="pl-s1"><span class="pl-pds">'</span>uiaa<span class="pl-pds">'</span></span>); <span class="pl-c">// 'XI+'</span>
+grade.format(<span class="pl-s1"><span class="pl-pds">'</span>heuco<span class="pl-pds">'</span></span>); <span class="pl-c">// V12</span>
+grade.format(<span class="pl-s1"><span class="pl-pds">'</span>font<span class="pl-pds">'</span></span>); <span class="pl-c">// '8A+'</span>
+grade.format(<span class="pl-s1"><span class="pl-pds">'</span>british<span class="pl-pds">'</span></span>); <span class="pl-c">// 'E10 7c'</span>
+grade.format(<span class="pl-s1"><span class="pl-pds">'</span>yds<span class="pl-pds">'</span></span>); <span class="pl-c">// '5.14d'</span></pre></div>
+
+<h3>
+<a id="browser" class="anchor" href="#browser" aria-hidden="true"><span class="octicon octicon-link"></span></a>Browser</h3>
+
+<div class="highlight highlight-html"><pre><span class="pl-s2">&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span>&gt;</span>
+<span class="pl-s2">  <span class="pl-s">var</span> grade <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">ClimbingGrade</span>(<span class="pl-s1"><span class="pl-pds">"</span>9a<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>french<span class="pl-pds">"</span></span>);</span>
+<span class="pl-s2">  <span class="pl-s3">alert</span>(grade.format(<span class="pl-s1"><span class="pl-pds">"</span>yds<span class="pl-pds">"</span></span>));</span>
+<span class="pl-s2">&lt;/<span class="pl-ent">script</span>&gt;</span>&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+
+<p>Supports ranges </p>
+
+<div class="highlight highlight-javascript"><pre><span class="pl-s">var</span> heuco <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">ClimbingGrade</span>(<span class="pl-s1"><span class="pl-pds">'</span>vb<span class="pl-pds">'</span></span>, <span class="pl-s1"><span class="pl-pds">'</span>heuco<span class="pl-pds">'</span></span>);
+heuco.format(<span class="pl-s1"><span class="pl-pds">'</span>font<span class="pl-pds">'</span></span>); <span class="pl-c">// '1 to 3+'</span>
+
+
+<span class="pl-s">var</span> french <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">ClimbingGrade</span>(<span class="pl-s1"><span class="pl-pds">'</span>6c<span class="pl-pds">'</span></span>, <span class="pl-s1"><span class="pl-pds">'</span>french<span class="pl-pds">'</span></span>);
+french.format(<span class="pl-s1"><span class="pl-pds">'</span>yds<span class="pl-pds">'</span></span>); <span class="pl-c">// '5.11a/5.11b'</span></pre></div>
+
+<h3>
+<a id="systems" class="anchor" href="#systems" aria-hidden="true"><span class="octicon octicon-link"></span></a>Systems</h3>
+
+<ul>
+<li>'french'</li>
+<li>'australian'</li>
+<li>'south_african'</li>
+<li>'uiaa'</li>
+<li>'heuco'</li>
+<li>'font'</li>
+<li>'british'</li>
+<li>'yds'</li>
+</ul>
+
+<h2>
+<a id="tests" class="anchor" href="#tests" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tests</h2>
+
+<div class="highlight highlight-bash"><pre>jasmine</pre></div>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p><a href="LICENSE">MIT</a></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/Grantismo">Grantismo</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-60349203-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
