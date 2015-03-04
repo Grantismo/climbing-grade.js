@@ -29,9 +29,13 @@ or Minified
 <script type="text/javascript" src="bower_components/climbing-grade/ClimbingGrade.min.js"></script>
 ```
 
+## Demo
+
+[http://grantismo.github.io/ClimbingGrade.js/](http://grantismo.github.io/ClimbingGrade.js/)
+
 ## Usage
 
-Format a given grade in other grading systems
+Format a given grade in other grading systems.
 
 
 ### Node
