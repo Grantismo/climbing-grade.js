@@ -11,6 +11,13 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+    <script src="javascripts/ClimbingGrade.min.js"></script>
+    <script src="javascripts/jquery.min.js"></script>
+    <script src="javascripts/microplugin.js"></script>
+    <script src="javascripts/sifter.min.js"></script>
+    <script src="javascripts/selectize.min.js"></script>
+    <script src="javascripts/example.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -37,7 +44,16 @@
 
 <p>Currently supported systems include: French, Australian, South African, UIAA, Heuco, Font, British, YDS</p>
 
+<h2><a id="examples" class="anchor" href="#examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demo</h2>
+<div>
+  System: <select id="system"></select> <br />
+  Grade: <select id="grade"></select> <br />
+  Convert To: <select id="format"></select> <br />
+  <p> <strong> Converted: <span id="converted-grade">2</span> </strong> </p>
+</div>
+
 <h2>
+
 <a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
 
 <p>With node:</p>
@@ -114,7 +130,7 @@ french.format(<span class="pl-s1"><span class="pl-pds">'</span>yds<span class="p
 <p><a href="LICENSE">MIT</a></p>
       </section>
       <footer>
-        <p>This project is maintained by <a href="https://github.com/Grantismo">Grantismo</a></p>
+        <p>This project is maintained by <a href="https://github.com/Grantismo">Grant Warman</a></p>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
