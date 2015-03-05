@@ -1,0 +1,20 @@
+{
+  "name": "climbing-grade",
+  "main": "ClimbingGrade.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/Grantismo/ClimbingGrade.js",
+  "authors": [
+    "Grant Warman <grant.warman@gmail.com>"
+  ],
+  "description": "converts climbing grades between different systems",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ]
+}
