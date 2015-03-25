@@ -5,13 +5,13 @@
     "jasmine": "*"
   },
   "description": "converts climbing grades between different systems",
-  "main": "ClimbingGrade.js",
+  "main": "climbing-grade.js",
   "scripts": {
     "test": "jasmine"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Grantismo/ClimbingGrade.js.git"
+    "url": "https://github.com/Grantismo/climbing-grade.js.git"
   },
   "keywords": [
     "rock",
@@ -24,7 +24,7 @@
   "author": "Grant Warman <grant.warman@gmail.com> (https://github.com/Grantismo)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Grantismo/ClimbingGrade.js/issues"
+    "url": "https://github.com/Grantismo/climbing-grade.js/issues"
   },
-  "homepage": "https://github.com/Grantismo/ClimbingGrade.js"
+  "homepage": "https://github.com/Grantismo/climbing-grade.js"
 }

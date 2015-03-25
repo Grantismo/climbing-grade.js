@@ -1,8 +1,8 @@
-# ClimbingGrade.js
+# climbing-grade.js
 
 [![MIT License][license-image]][license-url]
 
-> ClimbingGrade.js converts climbing grades between different systems.
+> climbing-grade.js converts climbing grades between different systems.
 
 Currently supported systems include: French, Australian, South African, UIAA, Hueco, Font, British, YDS
 
@@ -21,7 +21,7 @@ bower install climbing-grade
 ```
 
 ```html
-<script type="text/javascript" src="bower_components/climbing-grade/ClimbingGrade.js"></script>
+<script type="text/javascript" src="bower_components/climbing-grade/climbing-grade.js"></script>
 ```
 
 or Minified
@@ -31,7 +31,7 @@ or Minified
 
 ## Demo
 
-[http://grantismo.github.io/ClimbingGrade.js/](http://grantismo.github.io/ClimbingGrade.js/)
+[http://grantismo.github.io/climbing-grade.js/](http://grantismo.github.io/climbing-grade.js/)
 
 ## Usage
 
