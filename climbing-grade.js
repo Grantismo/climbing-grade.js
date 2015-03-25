@@ -1,7 +1,9 @@
 var ClimbingGrade = (function() {
-  function ClimbingGrade(grade, system) {
+  function ClimbingGrade(grade, system, options) {
     this._inputGrade = grade;
     this._inputSystemName = system;
+    this._rangeDelimeter = options && options.rangeDelimeter ? options.rangeDelimeter : " to ";
+    this._pairDelimeter = options && options.pairDelimeter ? options.pairDelimeter : "/";
     this._systems = {
       yds: {
         grades: ["5.1", "5.2", "5.3", "5.4", "5.5", "5.6", "5.7", "5.8", "5.9", "5.10a", "5.10b", "5.10c", "5.10d", "5.11a", "5.11b", "5.11c", "5.11d", "5.12a", "5.12b", "5.12c", "5.12d", "5.13a", "5.13b", "5.13c", "5.13d", "5.14a", "5.14b", "5.14c", "5.14d", "5.15a", "5.15b", "5.15c", "5.15d"],
@@ -39,16 +41,19 @@ var ClimbingGrade = (function() {
     this._universalGrades = this.getUniversalGrades();
   }
 
-  function formatGrade(g, system){
+  function formatGrade(g, system) {
     return system.format ? system.format.call(g) : g;
   }
 
-  var _format = function(target) {
+  var _format = function(target, options) {
     var system = this.getSystem(target);
 
-    if(target === this._inputSystemName){
+    if (target === this._inputSystemName) {
       return formatGrade(this._inputGrade, system);
     }
+
+    var pairDelimeter = options && options.pairDelimeter ? options.pairDelimeter : this._pairDelimeter;
+    var rangeDelimeter = options && options.rangeDelimeter ? options.rangeDelimeter : this._rangeDelimeter;
 
 
     var gradeSet = Object.create(null);
@@ -56,7 +61,7 @@ var ClimbingGrade = (function() {
     var grades = [];
     for (var i = 0; i < universalGrades.length; i++) {
       var gradeRange = system.grades[universalGrades[i]].split("/");
-      for(var j = 0; j < gradeRange.length; j++){
+      for (var j = 0; j < gradeRange.length; j++) {
         var g = gradeRange[j];
         var grade = formatGrade(g, system);
         if (!(grade in gradeSet)) {
@@ -69,9 +74,9 @@ var ClimbingGrade = (function() {
     if (grades.length == 1) {
       return grades[0];
     } else if (grades.length == 2) {
-      return grades.join("/");
+      return grades.join(pairDelimeter);
     } else if (grades.length > 2) {
-      return grades[0] + " to " + grades[grades.length - 1];
+      return grades[0] + rangeDelimeter + grades[grades.length - 1];
     }
   };
 
@@ -108,8 +113,8 @@ var ClimbingGrade = (function() {
     return universalGrades;
   };
 
-  ClimbingGrade.prototype.format = function(target) {
-    return _format.call(this, target);
+  ClimbingGrade.prototype.format = function(target, options) {
+    return _format.call(this, target, options);
   };
 
   return ClimbingGrade;

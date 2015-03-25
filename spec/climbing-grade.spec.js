@@ -21,7 +21,7 @@ describe("ClimbingGrade", function() {
 
 
   if (!this.ClimbingGrade) {
-    var ClimbingGrade = require("../ClimbingGrade");
+    var ClimbingGrade = require("../climbing-grade");
   }
 
   it("can be instantiated", function() {
@@ -48,6 +48,20 @@ describe("ClimbingGrade", function() {
     var french = new ClimbingGrade("6c", "french");
     converted = french.format("yds");
     expect(converted).toBe("5.11a/5.11b");
+  });
+
+  it("can change delimeters in initializer, or when formating", function() {
+    var hueco1 = new ClimbingGrade("vb", "hueco");
+    expect(hueco1.format("font", {rangeDelimeter: " - "})).toBe("1 - 3+");
+
+    var hueco2 = new ClimbingGrade("vb", "hueco", {rangeDelimeter: " - "});
+    expect(hueco2.format("font")).toBe("1 - 3+");
+
+    var french1 = new ClimbingGrade("6c", "french");
+    expect(french1.format("yds", {pairDelimeter: " to "})).toBe("5.11a to 5.11b");
+
+    var french2 = new ClimbingGrade("6c", "french", {pairDelimeter: " to "});
+    expect(french2.format("yds")).toBe("5.11a to 5.11b");
   });
 
   it("can format grades appropriately", function() {
