@@ -26,7 +26,7 @@ bower install climbing-grade
 
 or Minified
 ```html
-<script type="text/javascript" src="bower_components/climbing-grade/ClimbingGrade.min.js"></script>
+<script type="text/javascript" src="bower_components/climbing-grade/climbing-grade.min.js"></script>
 ```
 
 ## Demo
