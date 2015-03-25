@@ -51,10 +51,10 @@ describe("ClimbingGrade", function() {
   });
 
   it("can format grades appropriately", function() {
-    var hueco = new ClimbingGrade("v6", "hueco");
-    expect(hueco.format("hueco")).toBe("V6");
+    var hueco = new ClimbingGrade("v7", "hueco");
+    expect(hueco.format("hueco")).toBe("V7");
     expect(hueco.format("uiaa")).toBe("IX+");
-    expect(hueco.format("font")).toBe("7A");
+    expect(hueco.format("font")).toBe("7A+");
     expect(hueco.format("british")).toBe("E6 6c");
   });
 
@@ -88,6 +88,11 @@ describe("ClimbingGrade", function() {
 
   it("works with yds", function() {
     testSystem("yds");
+  });
+
+  it("reasonably converts sport to boulder grades", function() {
+    expect(new ClimbingGrade("5.13a", "yds").format("hueco")).toBe("V7");
+    expect(new ClimbingGrade("5.14a", "yds").format("hueco")).toBe("V10");
   });
 
   function testSystem(systemName){
