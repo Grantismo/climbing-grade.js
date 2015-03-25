@@ -46,7 +46,7 @@ var grade = new ClimbingGrade('9a', 'french');
 grade.format('australian'); // '35'
 grade.format('south_african'); // '37'
 grade.format('uiaa'); // 'XI+'
-grade.format('hueco'); // V13
+grade.format('hueco'); // 'V13'
 grade.format('font'); // '8B'
 grade.format('british'); // 'E10 7c'
 grade.format('yds'); // '5.14d'
