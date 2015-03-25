@@ -1,7 +1,7 @@
 {
   "name": "climbing-grade",
   "main": "climbing-grade.js",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "homepage": "https://github.com/Grantismo/climbing-grade.js",
   "authors": [
     "Grant Warman <grant.warman@gmail.com>"
