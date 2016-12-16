@@ -50,6 +50,8 @@ grade.format('hueco'); // 'V13'
 grade.format('font'); // '8B'
 grade.format('british'); // 'E10 7c'
 grade.format('yds'); // '5.14d'
+grade.format('kurtyki'); // 'VI.8'
+
 ```
 
 ### Browser
@@ -82,7 +84,7 @@ french.format('yds'); // '5.11a/5.11b'
 * 'font'
 * 'british'
 * 'yds'
-
+* 'kurtyki'
 
 ## Tests
 

@@ -35,6 +35,12 @@ var ClimbingGrade = (function() {
       font: {
         grades: ["1", "1", "1", "1", "1", "1+", "2", "2+", "3", "3+", "4", "4+", "5", "5+", "6a", "6a+", "6b", "6b+", "6c", "6c+", "7a", "7a+", "7b", "7b+", "7c", "7c+", "8a", "8a+", "8b", "8b+", "8c", "8c+", "9a"],
         format: String.prototype.toUpperCase
+      },
+      kurtyki: {
+        grades: ["ii", 'ii+', 'iii+', 'iv', 'iv+', 'v-', 'v', 'v+', 'vi', 'vi+', 'vi.1', 'vi.1+', 'vi.2', 'vi.2',
+          'vi.2+', 'vi.3', 'vi.3', 'vi.3+', 'vi.4', 'vi.4', 'vi.4+', 'vi.5', 'vi.5+', 'vi.5+/vi.6', 'vi.6', 'vi.6+', 'vi.7', 'vi.7+', 'vi.8', 'vi.8', 'vi.8', 'vi.8', 'vi.8', 'vi.8'
+        ],
+        format: String.prototype.toUpperCase
       }
     };
 
