@@ -7,7 +7,7 @@ describe("ClimbingGrade", function() {
   var font = ["1", "1+", "2", "2+", "3", "3+", "4", "4+", "5", "5+", "6a", "6a+", "6b", "6b+", "6c", "6c+", "7a", "7a+", "7b", "7b+", "7c", "7c+", "8a", "8a+", "8b", "8b+", "8c", "8c+"];
   var british = ["m 1", "d 2", "vd 3a", "vd 3b", "hvd 3b", "hvd 3c", "s 3c", "ms 4a", "s 4b", "hs 4b", "hs 4b", "vs 4b", "hvs 4c", "hvs 5a", "e1 5a", "e1 5b", "e2 5b", "e2 5c", "e3 5c", "e3 6a", "e4 6a", "e4 6b", "e5 6b", "e5 6b", "e6 6b", "e6 6b", "e6 6c", "e7 6c", "e7 7a", "e8 7a", "e8 7b", "e9 7b", "e10 7b", "e10 7c", "e11 7c", "e11 8a", "e11 8b", "e11 8c"];
   var yds = ["5.1", "5.2", "5.3", "5.4", "5.5", "5.6", "5.7", "5.8", "5.9", "5.10a", "5.10b", "5.10c", "5.10d", "5.11a", "5.11b", "5.11c", "5.11d", "5.12a", "5.12b", "5.12c", "5.12d", "5.13a", "5.13b", "5.13c", "5.13d", "5.14a", "5.14b", "5.14c", "5.14d", "5.15a", "5.15b", "5.15c", "5.15d"];
-
+  var kurtyki = ["ii", 'ii+', 'iii+', 'iv', 'iv+', 'v-', 'v', 'v+', 'vi', 'vi+', 'vi.1', 'vi.1+', 'vi.2', 'vi.2','vi.2+', 'vi.3', 'vi.3', 'vi.3+', 'vi.4', 'vi.4', 'vi.4+', 'vi.5', 'vi.5+', 'vi.6', 'vi.6', 'vi.6+', 'vi.7', 'vi.7+', 'vi.8', 'vi.8', 'vi.8', 'vi.8', 'vi.8', 'vi.8'];
   var systems = {
     french: french,
     australian: australian,
@@ -16,7 +16,8 @@ describe("ClimbingGrade", function() {
     hueco: hueco,
     font: font,
     british: british,
-    yds: yds
+    yds: yds,
+    kurtyki: kurtyki
   };
 
 
@@ -102,6 +103,10 @@ describe("ClimbingGrade", function() {
 
   it("works with yds", function() {
     testSystem("yds");
+  });
+
+  it("works with kurtyki", function() {
+    testSystem("kurtyki");
   });
 
   it("reasonably converts sport to boulder grades", function() {
